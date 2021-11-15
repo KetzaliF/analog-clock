@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(39, 39, 39);
+   font-family: 'Poppins', sans-serif;
+}
+
+.clock {
+   background-image: url(assets/clock.png);
+   width: 300px;
+   height: 300px;
+   background-size: 250px 255px;
+   background-repeat: no-repeat;
+   background-position: center;
+   box-shadow: inset -1px -1px 2px rgba(31, 31, 31, .5),
+                           -4px 4px 8px rgba(31, 31, 31, .2),
+                           4px -4px 8px rgba(31, 31, 31, .2),
+                           -4px -4px 8px rgba(47, 47, 47, .9),
+                           4px 4px 10px rgba(31, 31, 31, .9);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation: animate 1s linear infinite;
+}
+
+.clock::before {
+   content: '';
+   width: 14px;
+   height: 14px;
+   position: absolute;
+   background-color: rgb(219, 219, 219);
+   border-radius: 50%;
+   z-index: 40;
+}
+
+.hour, .minutes, .seconds {
+   position: absolute;
+}
+
+.hour, .hr {
+   width: 100px;
+   height: 100px;
+}
+
+.minutes, .mn {
+   width: 160px;
+   height: 160px;
+}
+
+.seconds, .sc {
+   width: 160px;
+   height: 160px;
+}
+
+.hr, .mn, .sc {
+   display: flex;
+   justify-content: center;
+   position: absolute;
+}
+
+.hr::before {
+   content: '';
+   width: 6px;
+   height: 50px;
+   background-color: rgb(0, 173, 181);
+   border-radius: 6px 6px 0 0;
+   z-index: 10;
+}
+
+.mn::before {
+   content: '';
+   width: 4px;
+   height: 80px;
+   background-color: rgb(219, 219, 219);
+   border-radius: 6px 6px 0 0;
+   z-index: 11;
+}
+
+.sc::before {
+   content: '';
+   width: 2px;
+   height: 80px;
+   background-color: rgb(219, 219, 219);
+   border-radius: 6px 6px 0 0;
+   z-index: 12;
+}
+
+.date {
+   margin-top: 70px;
+   font-size: 1.5em;
+   font-weight: 500;
+   color: rgb(219, 219, 219);
+}
+
+@keyframes animate {
+   0% {
+      box-shadow: inset -1px -1px 2px rgba(66, 22, 22, 0.5),
+                              -4px 4px 8px rgba(87, 97, 245, 0.2),
+                              4px -4px 8px rgba(0, 173, 181, 0.2),
+                              -4px -4px 8px rgba(0, 173, 181, .9),
+                              4px 4px 10px rgba(0, 173, 181, .9);
+   }
+   100% {
+      box-shadow: inset -1px -1px 2px rgba(31, 31, 31, .5),
+                           -4px 4px 8px rgba(31, 31, 31, .2),
+                           4px -4px 8px rgba(31, 31, 31, .2),
+                           -4px -4px 8px rgba(47, 47, 47, .9),
+                           4px 4px 10px rgba(31, 31, 31, .9);
+   }
+}
