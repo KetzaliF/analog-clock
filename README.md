@@ -2,7 +2,7 @@
 
 Creating an analog clock with date.
 
-![Gif del proyecto](-)
+![Gif del proyecto](https://github.com/KetzaliF/analog-clock/blob/main/assets/analog-clock.gif)
 
 ## Development Tools 🛠️
 
